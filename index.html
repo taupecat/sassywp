@@ -45,9 +45,8 @@
 				<section>
 					<h2>What Are CSS Preprocessors?</h2>
 					
-					<p class="fragment">Tools to make writing CSS easier and more organized.</p>
-					<p class="fragment">They run as a part of another language.<br>
-						Usually JavaScript or Ruby, but also PHP.</p>
+					<p class="fragment">There is <strong>nothing</strong> you can do in a CSS preprocessor that you can't do in pure CSS.</p>
+					<p class="fragment">They just make it easier, faster and more organized.</p>
 				</section>
 
 				<section>
@@ -66,14 +65,141 @@
 				</section>
 
 				<section>
-					<h2>Why CSS Preprocessors Are Awesome</h2>
+					<h2>Why CSS Preprocessors Are Awesome*</h2>
 					<p><img src="images/success-baby.png"></p>
+					<p class="small">*Not all features available in all preprocessors.</p>
 				</section>
 
+				<section>
+					<h2>Nesting</h2>
+
+<pre><code data-trim contenteditable>
+.sidebar {
+	border-left: 1px solid #262626;
+	padding-left: 20px;
+
+	aside {
+		margin-bottom: 20px;
+
+		a {
+			color: #ffe44b;
+
+			&:hover, &:active, &:focus {
+				color: #e10000;
+			}
+		}
+	}
+}
+</code></pre>
+				</section>
 
 				<section>
-					<h2>Why CSS Preprocessors Suck (?)</h2>
+					<h2>Nesting</h2>
+
+<pre><code data-trim contenteditable>
+.sidebar {
+	border-left: 1px solid #262626;
+	padding-left: 20px;
+}
+
+.sidebar aside {
+	margin-bottom: 20px;
+}
+
+.sidebar aside a {
+	color: #ffe44b;
+}
+
+.sidebar aside a:hover,
+.sidebar aside a:active,
+.sidebar aside a:focus {
+	color: #e10000;
+}
+</code></pre>
+				</section>
+
+				<section>
+					<h2>@extend & Placeholder Selectors</h2>
+<pre><code data-trim contenteditable>
+%widget-default {
+	background-color: #FFFCEB;
+	color: #262626;
+	text-decoration: underline;
+}
+
+.sidebar {
+	@extend %widget-default;
+
+	font-size: 13px;
+}
+
+.widget-area {
+	@extend %widget-default;
+
+	font-size: 16px;
+}
+</code></pre>
+				</section>
+
+				<section>
+					<h2>@extend & Placeholder Selectors</h2>
+<pre><code data-trim contenteditable>
+.sidebar,
+.widget-area {
+	background-color: #FFFCEB;
+	color: #262626;
+	text-decoration: underline;
+}
+
+.sidebar {
+	font-size: 13px;
+}
+
+.widget-area {
+	font-size: 16px;
+}
+</code></pre>
+				</section>
+
+				<section>
+					<h2>Concatenation & Minification</h2>
+					<p>Two big words for making things smaller.</p>
+				</section>
+
+				<section>
+					<h2>Mixins</h2>
+				</section>
+
+				<section>
+					<h2>Variables</h2>
+				</section>
+
+				<section>
+					<h2>Functions</h2>
+				</section>
+
+				<section>
+					<h2>Media Query Bubbling</h2>
+				</section>
+
+				<section>
+					<h2>Why CSS Preprocessors Suck*</h2>
 					<p><img src="images/sad-panda.jpg"></p>
+					<p class="small">*Sucking is a highly subjective term.</p>
+				</section>
+
+				<section>
+					<h2>Code Bloat</h2>
+					<p class="fragment">Use features such as nesting responsibly. (Inception rule)</p>
+					<p class="fragment">A few extra characters here & there isn't going to be a big deal so long as you're minifying and Gzipping.</p>
+				</section>
+
+				<section>
+					<h2>Added Complexity</h2>
+				</section>
+
+				<section>
+					<h2>Whither Our Workflow?</h2>
 				</section>
 
 				<!-- Example of nested vertical slides -->
