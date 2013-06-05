@@ -36,6 +36,14 @@ body {
   background: #ff5e99;
   text-shadow: none; }
 
+strong {
+  color: #ffe44b;
+}
+
+.small {
+  font-size: 0.5em;
+}
+
 /*********************************************
  * HEADERS
  *********************************************/
