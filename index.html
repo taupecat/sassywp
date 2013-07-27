@@ -498,8 +498,20 @@ Author URI: http://wordpress.org/
 				</section>
 
 				<section>
-					<p>If you're going to minify the final result, those comments go away and your theme will be unusable.</p>
+					<p>If you're going to minify the final result, those comments go away and your theme will be unusable.*</p>
 					<p class="fragment">There's <strong>nothing</strong> in the WordPress handbook that says you must use <strong>style.css</strong> as your stylesheet.</p>
+				</section>
+
+				<section>
+					<p>*There <strong>is</strong> a way to force comments to be preserved, even when compressing the output:</p>
+<pre><code data-trim>
+/*!
+Theme Name: Twenty Twelve
+Theme URI: http://wordpress.org/themes/twentytwelve
+Author: the WordPress team
+Author URI: http://wordpress.org/
+*/
+</code></pre>
 				</section>
 
 				<section>
@@ -524,11 +536,11 @@ Author URI: http://wordpress.org/
 	* **LESS** http://lesscss.org
 	* **Sass** http://sass-lang.com
 	* **Compass** http://compass-style.org/
-	* **Stylus** http://learnboost.github.io/stylus/
 	* **WP-LESS** http://wordpress.org/plugins/wp-less/
 	* **WordPress Sass** http://wordpress.org/plugins/wordpress-sass/
 	* **CodeKit** http://incident57.com/codekit/
 	* **Scout** http://mhs.github.io/scout-app/
+	* **Koala** http://koala-app.com/
 </section>
 
 
@@ -544,8 +556,9 @@ Author URI: http://wordpress.org/
 
 <section>
 	<h2>Or Read My Book</h2>
-	<p><i>Responsive WordPress Theming</i><br> (not finalized title) due out this fall.</p>
-	<p class="fragment">Or available in early,<br> advanced form sooner (like in a few weeks).</p>
+	<p><i>Responsive WordPress Theming</i><br> due out this fall.</p>
+	<p class="fragment">Or available in early,<br> advanced form <strong>NOW</strong>.<br>
+		http://www.manning.com/rotton/</p>
 </section>
 
 
@@ -586,5 +599,17 @@ Author URI: http://wordpress.org/
 
 		</script>
 
-	</body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36595663-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>	</body>
 </html>
