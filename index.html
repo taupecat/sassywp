@@ -1,134 +1,170 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
 
-		<title>CSS Preprocessors + WordPress</title>
+	<title>CSS Preprocessors + WordPress</title>
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+	<link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="css/theme/rp3-dark.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
 
-	<body>
 
-		<div class="reveal">
+<body>
+
+	<div class="reveal">
+
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
+
+
+<section>
+	<h2>CSS Preprocessors + WordPress</h2>
+
+	<p>or...</p>
+</section>
+
+
+
+<section>
+	<p><img src="images/itsalwayssunnyinphiladelphia_logo.png"></p>
+
+	<p>(Follow along at <a href="http://taupecat.github.io/csswp">http://taupecat.github.io/csswp</a>)</p>
+</section>
+
+
+
+<section>
+	<h3>Tweet it!</h3>
+	<p style="font-size: 1.4em;">I'm getting my <strong>Sass</strong> on at #wcphilly!</p>
+</section>
+
+
+
 				<section data-markdown>
-					## CSS Preprocessors + WordPress
-					### Learn how to write CSS in a whole new way
+						## Tracy Rotton
 
-					(Follow along at **http://www.taupecat.com/csswp/**)
-				</section>
+						Lead Web Developer  
+						[RP3 Agency](http://rp3.io), Bethesda, Maryland
 
-				<section data-markdown>
-					## Who am I?
-					
-					* Front-End Developer & WordPress Themer
-					* Work for RP3 in Bethesda
-					* Pushing pixels since 1994
+						http://www.taupecat.com  
+						tracy@taupecat.com  
+						[@taupecat](http://twitter.com/taupecat)
 				</section>
 
 
+<section>
+	<h2>What Are We Talking About?</h2>
 
-				<section>
-					<h2>What Are CSS Preprocessors?</h2>
-					
-					<p class="fragment">There is <strong>nothing</strong> you can do in a CSS preprocessor that you can't do in pure CSS.</p>
-					<p class="fragment">They just make it <strong>easier</strong>, <strong>faster</strong> and more <strong>organized</strong>.</p>
-				</section>
+	<ul>
+		<li class="fragment">What is a CSS preprocessor?</li>
+		<li class="fragment">Pros & cons.</li>
+		<li class="fragment">How can CSS preprocessors enter your WordPress theming workflow?</li>
+	</ul>
+</section>
 
-				<section>
-					<h2>What are some of the major preprocessors out there?</h2>
-				</section>
 
-				<section>
-					<h2>LESS</h2>
-					<p class="fragment">JavaScript-based.</p>
-					<p class="fragment">Low barrier to entry because you just include a JavaScript file with your code.</p>
-					<p class="fragment">Also works well with node.js.</p>
-				</section>
+<section>
+	<h2>What Is a CSS Preprocessor?</h2>
 
-				<section>
-					<h2>Sass</h2>
-					<p class="fragment">Ruby-based</p>
-					<p class="fragment">Has 2 syntaxes: Sass (indentation-based) and SCSS (more like regular CSS)</p>
-					<p class="fragment">Has Compass - framework that adds additional utilities like vendor prefixing, sprite generation, URL-shortcuts.</p>
-				</section>
+	<ul>
+		<li class="fragment">Introduces <strong>programming</strong> concepts into CSS authoring.</li>
+		<li class="fragment">Makes CSS authoring <strong>easier</strong>, <strong>faster</strong>, and more <strong>organized</strong>.</li>
+	</ul>
+</section>
 
-				<section>
-					<h2>Why CSS Preprocessors Are Awesome*</h2>
-					<p><img src="images/success-baby.png"></p>
-					<p class="small">*Not all features available in all preprocessors.</p>
-				</section>
+<section>
+	<h3>Popular CSS Preprocessors</h3>
 
-				<section>
-					<h2>Nesting</h2>
+	<ul>
+		<li class="fragment"><a href="http://lesscss.org/">LESS</a> (or is it Less now?)</li>
+		<li class="fragment"><a href="http://learnboost.github.io/stylus/">Stylus</a></li>
+		<li class="fragment">
+			<strong><a href="http://sass-lang.com/">Sass</a></strong><br>
+			<span class="fragment">"Blessed" by WordPress core</span><br>
+			<span class="fragment">Strong community</span><br>
+			<span class="fragment">Can Do Lots of Cool Stuff</span>
+		</li>
+	</ul>
+</section>
 
-<pre><code data-trim >
-.sidebar {
-	border-left: 1px solid #262626;
-	padding-left: 20px;
 
-	aside {
-		margin-bottom: 20px;
+<section>
+	<h3>Why Sass Is Awesome</h3>
+	<p><img src="images/success-baby.png"></p>
+</section>
 
-		a {
-			color: #ffe44b;
 
-			&:hover, &:active, &:focus {
-				color: #e10000;
-			}
-		}
-	}
-}
-</code></pre>
-				</section>
 
-				<section>
-					<h2>Nesting</h2>
+<!-- Nesting -->
 
-<pre><code data-trim>
-.sidebar {
-	border-left: 1px solid #262626;
-	padding-left: 20px;
+<section>
+
+	<section>
+		<h2>Nesting</h2>
+
+<pre><code data-trim>.sidebar {
+  border-left: 1px solid #262626;
+  padding-left: 20px;
+
+  aside {
+    margin-bottom: 20px;
+
+    a {
+      color: #ffe44b;
+
+      &:hover, &:active, &:focus {
+        color: #e10000;
+      }
+    }
+  }
+}</code></pre>
+
+	</section>
+
+	<section>
+		<h2>Nesting</h2>
+
+<pre><code data-trim>.sidebar {
+  border-left: 1px solid #262626;
+  padding-left: 20px;
 }
 
 .sidebar aside {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .sidebar aside a {
-	color: #ffe44b;
+  color: #ffe44b;
 }
 
 .sidebar aside a:hover,
 .sidebar aside a:active,
 .sidebar aside a:focus {
-	color: #e10000;
-}
-</code></pre>
-				</section>
+  color: #e10000;
+}</code></pre>
+
+	</section>
+
+</section>
+
+
 
 				<section>
 					<h2>Variables</h2>
@@ -392,7 +428,7 @@ h1 {
 				</section>
 
 				<section>
-					<h2>Why CSS Preprocessors Suck*</h2>
+					<h3>Why Sass Sucks*</h3>
 					<p><img src="images/sad-panda.jpg"></p>
 					<p class="small">*Sucking is a highly subjective term.</p>
 				</section>
