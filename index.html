@@ -117,7 +117,7 @@
 <section>
 
 	<section>
-		<h2>Nesting</h2>
+		<h3>Nesting</h3>
 
 <pre><code data-trim>.sidebar {
   border-left: 1px solid #262626;
@@ -139,7 +139,7 @@
 	</section>
 
 	<section>
-		<h2>Nesting</h2>
+		<h3>Nesting</h3>
 
 <pre><code data-trim>.sidebar {
   border-left: 1px solid #262626;
@@ -166,266 +166,279 @@
 
 
 
-				<section>
-					<h2>Variables</h2>
-					<p class="fragment">Any string can be a variable.</p>
-					<p class="fragment">Great for defining colors and font stacks.</p>
-<pre class="fragment" data-trim><code>
-$color-primary: #002366;
+
+<!-- Variables -->
+
+<section>
+
+	<section>
+		<h3>Variables</h3>
+		<ul>
+			<li class="fragment">Any string can be a variable.</li>
+			<li class="fragment">Great for defining colors and font stacks.</li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>Variables</h3>
+<pre data-trim><code>$color-primary: #002366;
 $font-header: Roboto, "Helvetica Neue", Arial, sans-serif;
 
 body {
-	background-color: $color-primary;
+  background-color: $color-primary;
 }
 
 h1, h2, h3 {
-	font-family: $font-header;
-}
-</code></pre>
-				</section>
+  font-family: $font-header;
+}</code></pre>
+	</section>
 
-				<section>
-					<h2>Variables</h2>
-<pre><code>
-body {
-	background-color: #002366;
+	<section>
+		<h3>Variables</h3>
+<pre><code>body {
+  background-color: #002366;
 }
 
 h1, h2, h3 {
-	font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-</code></pre>
-				</section>
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+}</code></pre>
+	</section>
 
-				<section>
-					<h2>@extend & Placeholder Selectors</h2>
-<pre><code data-trim>
-%widget-default {
-	background-color: #FFFCEB;
-	color: #262626;
-	text-decoration: underline;
-}
+</section>
 
-.sidebar {
-	@extend %widget-default;
 
-	font-size: 13px;
-}
 
-.widget-area {
-	@extend %widget-default;
+<!-- @extend -->
 
-	font-size: 16px;
-}
-</code></pre>
-				</section>
+<section>
 
-				<section>
-					<h2>@extend & Placeholder Selectors</h2>
-<pre><code data-trim>
-.sidebar,
-.widget-area {
-	background-color: #FFFCEB;
-	color: #262626;
-	text-decoration: underline;
+	<section>
+	 	<h3>@extend & Placeholder Selectors</h3>
+<pre><code data-trim>%widget-default {
+  background-color: #FFFCEB;
+  color: #262626;
+  text-decoration: underline;
 }
 
 .sidebar {
-	font-size: 13px;
+  @extend %widget-default;
+
+  font-size: 13px;
 }
 
 .widget-area {
-	font-size: 16px;
+  @extend %widget-default;
+
+  font-size: 16px;
+}</code></pre>
+
+	</section>
+
+	<section>
+		<h3>@extend & Placeholder Selectors</h3>
+<pre><code data-trim>.sidebar,
+.widget-area {
+  background-color: #FFFCEB;
+  color: #262626;
+  text-decoration: underline;
 }
-</code></pre>
-				</section>
 
-				<section>
-					<h2>Concatenation & Minification</h2>
-					<p class="fragment">Two big words for making things smaller.</p>
-					<p class="fragment">Sass has "partials", imported files that are concatenated into one bigger file and not processed separately.</p>
-				</section>
+.sidebar {
+  font-size: 13px;
+}
 
-				<section>
-					<h2>Concatenation & Minification</h2>
-<pre><code data-trim>
--rw-r--r--   1 taupecat  staff   153 May 24 23:36 _asides.scss
+.widget-area {
+  font-size: 16px;
+}</code></pre>
+	</section>
+
+</section>
+
+
+<!-- concatenation -->
+
+<section>
+	<section>
+		<h3>Concatenation & Minification</h3>
+		<p class="fragment">Two big words for making things smaller.</p>
+		<p class="fragment">Sass has <strong>partials</strong>, imported files that are concatenated into one bigger file and not processed separately.</p>
+	</section>
+
+
+	<section>
+		<h3>Concatenation & Minification</h3>
+
+		<pre><code data-trim>-rw-r--r--   1 taupecat  staff   153 May 24 23:36 _asides.scss
 -rw-r--r--   1 taupecat  staff   130 May 24 23:37 _comments.scss
 -rw-r--r--   1 taupecat  staff   300 May 24 23:35 _content.scss
 -rw-r--r--   1 taupecat  staff  5904 May 26 20:55 _global.scss
 -rw-r--r--   1 taupecat  staff   298 May 24 23:37 _navigation.scss
 -rw-r--r--   1 taupecat  staff  1731 May 25 22:02 _reset.scss
--rw-r--r--   1 taupecat  staff  1731 May 25 22:02 project.scss
-</code></pre>
-				</section>
+-rw-r--r--   1 taupecat  staff  1731 May 25 22:02 project.scss</code></pre>
+	</section>
 
-				<section>
-					<h2>Concatenation & Minification</h2>
-<pre><code data-trim>
-@import "reset";
+	<section>
+		<h3>Concatenation & Minification</h3>
+<pre><code data-trim>@import "reset";
 @import "global";
 @import "navigation";
 @import "content";
 @import "asides";
-@import "comments";
-</code></pre>
-				</section>
+@import "comments";</code></pre>
+	</section>
 
-				<section>
-					<h2>Concatenation & Minification</h2>
-					<p>Resulting compiled "project.css" contains all of the imported files.</p>
-					<p class="fragment"><strong>No extra HTTP requests required.</strong></p>
-				</section>
-
-
-
-				<section>
-					<h2>Functions</h2>
-					<p>Do one thing, then return a result.</p>
-					<p class="fragment">Calculate a value or modify a color, for example.</p>
-				</section>
+	<section>
+		<h3>Concatenation & Minification</h3>
+		<p>Resulting compiled <strong>project.css</strong> contains all of the imported files.</p>
+		<p class="fragment"><strong>No extra HTTP requests required.</strong></p>
+	</section>
+</section>
 
 
-				<section>
-					<h2>Functions</h2>
-					<p><strong>Awesome</strong> for responsive design, when you need:</p>
 
-<pre><code data-trim>
-/* target / context = result */
+<!-- Functions -->
+
+<section>
+
+	<section>
+		<h3>Functions</h3>
+		<p>Do one thing, then return a result.</p>
+		<p class="fragment">Calculate a value or modify a color, for example.</p>
+	</section>
+
+	<section>
+		<h3>Functions</h3>
+			<p><strong>Awesome</strong> for responsive design, when you need:</p>
+
+<pre><code data-trim>/* target / context = result */
 
 @function calc-percent($target, $context) {
-	@return ($target / $context) * 100%;
-}
-
-@function cp($target, $context) {
-	@return calc-percent($target, $context);
+  @return ($target / $context) * 100%;
 }
 
 .main-content {
-	width: cp(600px, 960px);
-}
-</code></pre>	
+  width: calc-percent(600px, 960px);
+}</code></pre>	
 
-				</section>
+	</section>
 
-				<section>
-					<h2>Functions</h2>
+	<section>
+		<h3>Functions</h3>
 
-<pre><code data-trim>
-.main-content {
-	width: 62.5%;
-}
-</code></pre>
+<pre><code data-trim>.main-content {
+  width: 62.5%;
+}</code></pre>
 
-				</section>
+	</section>
+</section>
 
 
-				<section>
-					<h2>Mixins</h2>
-<pre><code data-trim>
-$default-font-size: 16px !default;
+
+<!-- Mixins -->
+
+<section>
+
+	<section>
+		<h3>Mixins</h3>
+<pre><code data-trim>$default-font-size: 16px !default;
 
 @mixin rem($property, $value, $context: $default-font-size) {
-    #{$property}: $value;
-    #{$property}: ($value / $context * 1rem);
+  #{$property}: $value;
+  #{$property}: ($value / $context * 1rem);
 }
 
 h1 {
-	@include rem(font-size, 18px);
-}
-</code></pre>
-				</section>
+  @include rem(font-size, 18px);
+}</code></pre>
+	</section>
 
-				<section>
-					<h2>Mixins</h2>
-<pre><code data-trim>
-h1 {
-	font-size: 18px;
-	font-size: 1.125rem;
-}
-</code></pre>
-				</section>
+	<section>
+		<h3>Mixins</h3>
+<pre><code data-trim>h1 {
+  font-size: 18px;
+  font-size: 1.125rem;
+}</code></pre>
+	</section>
+
+</section>
 
 
-				<section>
-					<h2>Media Query Bubbling</h2>
-					<p class="fragment">This is the awesome sauce that makes responsive web design <strong>soooo</strong> much easier.</p>
-				</section>
+<!-- Media Query Bubbling -->
 
-				<section>
-					<h2>Media Query Bubbling</h2>
+<section>
+	<section>
+		<h3>Media Query Bubbling</h3>
+		<p class="fragment">This is the awesome sauce that makes responsive web design <strong>soooo</strong> much easier.</p>
+	</section>
 
-<pre><code data-trim>
-.main-content {
-	float: left;
-	margin-right: cp(20px, 960px);
-	width: cp(600px, 960px);
+	<section>
+		<h3>Media Query Bubbling</h3>
 
-	@media only all and (max-width: 560px) {
-		float: none;
-		margin-right: 0;
-		width: 100%;
-	}
+<pre><code data-trim>.main-content {
+  background-color: LavendarBlush
+
+  @media only all and (min-width: 560px) {
+    float: left;
+    margin-right: calc-percent( 20px, 960px );
+    width: calc-percent( 600px, 960px );
+  }
 }
 
 .sidebar {
-	float: left;
-	width: cp(340px, 960px);
+  background-color: MediumSlateBlue;
 
-	@media only all and (max-width: 560px) {
-		float: none;
-		width: 100%;
-	}
-}
-</code></pre>
+  @media only all and (min-width: 560px) {
+    float: left;
+    width: calc-percent( 340px, 960px );
+  }
+}</code></pre>
 
 <p class="small">Note: Just an illustration.<br>
 	There are actually better ways to do this.</p>
-				</section>
+	</section>
 
-				<section>
-					<h2>Media Query Bubbling</h2>
+	<section>
+		<h3>Media Query Bubbling</h3>
 
-<pre><code data-trim>
-.main-content {
-	float: left;
-	margin-right: 2.083333333333%;
-	width: 62.5%;
+<pre><code data-trim>.main-content {
+  background-color: LavendarBlush;
 }
 
 @media only all and (max-width: 560px) {
-	.main-content {
-		float: none;
-		margin-right: 0;
-		width: 100%;
-	}
+  .main-content {
+    float: left;
+    margin-right: 2.083333333333%;
+    width: 62.5%;
+  }
 }
 
 .sidebar {
-	float: left;
-	width: 35.416666666667%;
+  background-color: MediumSlateBlue;
 }
 
 @media only all and (max-width: 560px) {
-	.sidebar {
-		float: none;
-		width: 100%;
-	}
-}
-</code></pre>
+  .sidebar {
+    float: left;
+    width: 35.416666666667%;
+  }
+}</code></pre>
+
+	</section>
 </section>
 
-				<section>
-					<h2>More More MORE!</h2>
-<p>There are even more advanced features<br> that I won't go into detail here:</p>
-<ul>
-	<li class="fragment">if/else control statements</li>
-	<li class="fragment">for/while loops</li>
-	<li class="fragment">Arrays (kinda sorta)</li>
-</ul>
 
+<!-- Sass 102 -->
 
-				</section>
+<section>
+	<h3>More More MORE!</h3>
+	<p>There are even more advanced features<br> that I won't go into detail here:</p>
+	<ul>
+		<li class="fragment">if/else control statements</li>
+		<li class="fragment">for/while loops</li>
+		<li class="fragment">Arrays & Hashes (kinda sorta)</li>
+		<li class="fragment"><strong>Sass 102</strong></li>
+	</ul>
+</section>
 
 				<section>
 					<h3>Why Sass Sucks*</h3>
