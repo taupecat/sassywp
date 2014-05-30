@@ -174,7 +174,7 @@
 	<section>
 		<h3>Variables</h3>
 		<ul>
-			<li class="fragment">Any string can be a variable.</li>
+			<li class="fragment">Almost anything can be a variable.</li>
 			<li class="fragment">Great for defining colors and font stacks.</li>
 		</ul>
 	</section>
@@ -259,14 +259,13 @@ h1, h2, h3 {
 
 <section>
 	<section>
-		<h3>Concatenation & Minification</h3>
-		<p class="fragment">Two big words for making things smaller.</p>
-		<p class="fragment">Sass has <strong>partials</strong>, imported files that are concatenated into one bigger file and not processed separately.</p>
+		<h3>Concatenation</h3>
+		<p>Sass has <strong>partials</strong>, imported files that are concatenated into one bigger file and not processed separately.</p>
 	</section>
 
 
 	<section>
-		<h3>Concatenation & Minification</h3>
+		<h3>Concatenation</h3>
 
 		<pre><code data-trim>-rw-r--r--   1 taupecat  staff   153 May 24 23:36 _asides.scss
 -rw-r--r--   1 taupecat  staff   130 May 24 23:37 _comments.scss
@@ -278,7 +277,7 @@ h1, h2, h3 {
 	</section>
 
 	<section>
-		<h3>Concatenation & Minification</h3>
+		<h3>Concatenation</h3>
 <pre><code data-trim>@import "reset";
 @import "global";
 @import "navigation";
@@ -288,7 +287,7 @@ h1, h2, h3 {
 	</section>
 
 	<section>
-		<h3>Concatenation & Minification</h3>
+		<h3>Concatenation</h3>
 		<p>Resulting compiled <strong>project.css</strong> contains all of the imported files.</p>
 		<p class="fragment"><strong>No extra HTTP requests required.</strong></p>
 	</section>
@@ -433,9 +432,8 @@ h1 {
 	<h3>More More MORE!</h3>
 	<p>There are even more advanced features<br> that I won't go into detail here:</p>
 	<ul>
-		<li class="fragment">if/else control statements</li>
-		<li class="fragment">for/while loops</li>
-		<li class="fragment">Arrays & Hashes (kinda sorta)</li>
+		<li class="fragment">Data Types</li>
+		<li class="fragment">Control Structures</li>
 		<li class="fragment"><strong>Sass 102</strong></li>
 	</ul>
 </section>
@@ -454,79 +452,78 @@ h1 {
 
 				<section>
 					<h2>Added Complexity</h2>
-					<p class="fragment">No, it's not exactly CSS, but it's close.</p>
-					<p class="fragment">Didn't your mother ever tell you that learning was a lifelong process?</p>
+					<p>No, it's not exactly CSS, but it's close.</p>
 				</section>
 
 				<section>
-					<h2>Whither Our Workflow?</h2>
+					<h2>A WordPress Workflow</h2>
 					<ol>
-						<li class="fragment">Command-line based tools</li>
-						<li class="fragment">GUI tools</li>
-						<li class="fragment">WordPress plugins</li>
+						<li>GUI tools</li>
+						<li>Command-line based tools</li>
 					</ol>
 				</section>
 
-				<section>
-					<h2>CLI</h2>
-					<p>Using <strong>Sass</strong>?</p>
-					<p class="fragment">Use <code>sass --watch style.scss:style.css</code></p>
-				</section>
+
+
+<!-- CodeKit -->
+
+<section>
+
+	<section>
+
+		<h2>CodeKit</h2>
+		<ul>
+			<li>Graphical interface for compiling into CSS</li>
+			<li>Mac only</li>
+			<li>Handles <strong>Sass</strong>, <strong>Compass</strong>, <strong>LESS</strong> and <strong>Stylus</strong> and a bunch of other stuff.</li>
+		</ul>
+	</section>
+
+	<section>
+		<img src="images/codekit.png">
+	</section>
+</section>
+
+
+
+<section>
+	<h2>CLI</h2>
+	<ul>
+		<li>Grunt.js</li>
+		<li>Gulp.js</li>
+		<li>Brunch.js</li>
+	</ul>
+</section>
+
+
+
+<section>
+	<h2>Gulp.js</h2>
+
+<pre><code data-trim>gulp.task('styles', function() {
+  return gulp.src('src/sass/*.scss')
+    .pipe(sass({ style: 'expanded' }))
+    .on( 'error', gutil.log )
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    .pipe(gulp.dest('wp-content/themes/example/css'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(minifycss())
+    .pipe(gulp.dest('wp-content/themes/example/css'))
+    .pipe(notify({ message: 'Styles task complete' }));
+});
+</code></pre>
+
+<p class="small">Check out: <a href="http://markgoodyear.com/2014/01/getting-started-with-gulp/">Getting Started with Gulp</a></p>
+
+</section>
+
+
+
+
 
 				<section>
-					<h2>CLI</h2>
-					<p>Using <strong>Compass</strong>?</p>
-					<p class="fragment">Use <code>compass watch</code></p>
-					<p class="fragment">Compass' config.rb file tells compass where to watch and where to compile to.</p>
-				</section>
-
-				<section>
-					<h2>GUI</h2>
-					<p>If the command line isn't your friend, try a GUI tool.</p>
-					<p class="fragment">CodeKit is popular on the Mac.</p>
-					<p class="fragment">Handles <strong>Sass</strong>, <strong>Compass</strong>, <strong>LESS</strong> and <strong>Stylus</strong>.</p>
-				</section>
-
-				<section>
-					<h2>GUI</h2>
-					<p><strong>But wait, there's more!</strong></p>
-					<ul>
-						<li class="fragment">Lints, concatenates and minifies JavaScript</li>
-						<li class="fragment">Does stuff with Coffeescript, Haml, and some other things</li>
-						<li class="fragment">Adds imports and variables to HTML (.kit)</li>
-						<li class="fragment">And supposedly losslessly compresses images. (YMMV)</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Scout</h2>
-					<p><strong>Just</strong> does Sass & Compass, but is cross-platform (Mac/Windows)</p>
-				</section>
-
-				<section>
-					<h2>What About WordPress?</h2>
+					<h2></h2>
 					<p>Hey, this talk was supposed to be about CSS preprocessors <strong>and</strong> WordPress!</p>
-				</section>
-
-				<section>
-					<h2>Going the Plugin Route</h2>
-					<p>There are a bunch of plugins that will process your LESS or Sass files and convert them into CSS for WordPress.</p>
-				</section>
-
-				<section>
-					<h2>WP-LESS</h2>
-					<p>Create your *.less file, then add it to your theme using <code>wp_enqueue_style</code>.  WP-LESS does the rest.</p>
-				</section>
-
-				<section>
-					<h2>WordPress Sass</h2>
-					<p>Creates new function, <code>wpsass_define_stylesheet('stylesheet-name.scss')</code></p>
-					<p class="fragment">For reasons I will demonstrate in a moment, you <strong>cannot</strong> give your Sass file the name <strong><code>style.scss</code></strong></p>
-				</section>
-
-				<section>
-					<h2>Jetpack</h2>
-					<p>Jetpack's CSS editor will recognize and process LESS and Sass (in the SCSS syntax)</p>
 				</section>
 
 				<section>
@@ -536,14 +533,12 @@ h1 {
 
 				<section>
 					<h2>style.css</h2>
-<pre><code data-trim>
-/*
+<pre><code data-trim>/*
 Theme Name: Twenty Twelve
 Theme URI: http://wordpress.org/themes/twentytwelve
 Author: the WordPress team
 Author URI: http://wordpress.org/
-*/
-</code></pre>
+*/</code></pre>
 				</section>
 
 				<section>

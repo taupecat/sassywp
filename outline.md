@@ -57,6 +57,10 @@ There's really 3 that have won out.  There's really 1 that has won.
 
 ### CodeKit
 
+* Graphical interface for compiling into CSS
+
 ### Grunt/Gulp
+
+* Able to keep configuration in version control
 
 ### Multiple Developers
