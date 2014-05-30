@@ -288,8 +288,10 @@ h1, h2, h3 {
 
 	<section>
 		<h3>Concatenation</h3>
-		<p>Resulting compiled <strong>project.css</strong> contains all of the imported files.</p>
-		<p class="fragment"><strong>No extra HTTP requests required.</strong></p>
+		<ul>
+			<li>Resulting compiled <strong>project.css</strong> contains all of the imported files.</li>
+			<li class="fragment"><strong>No extra HTTP requests required.</strong></li>
+		</ul>
 	</section>
 </section>
 
@@ -301,8 +303,9 @@ h1, h2, h3 {
 
 	<section>
 		<h3>Functions</h3>
-		<p>Do one thing, then return a result.</p>
-		<p class="fragment">Calculate a value or modify a color, for example.</p>
+		<ul>
+			<li>Do one thing, then return a result.</li>
+			<li class="fragment">Calculate a value or modify a color, for example.</li>
 	</section>
 
 	<section>
@@ -446,13 +449,18 @@ h1 {
 
 				<section>
 					<h2>Code Bloat</h2>
-					<p class="fragment">Use features such as nesting responsibly. (Inception rule)</p>
-					<p class="fragment">A few extra characters here & there isn't going to be a big deal so long as you're minifying and Gzipping.</p>
+					<ul>
+						<li class="fragment">Use features such as nesting responsibly. (Inception rule)</li>
+						<li class="fragment">A few extra characters here & there isn't going to be a big deal so long as you're minifying and Gzipping.</li>
+					</ul>
 				</section>
 
 				<section>
 					<h2>Added Complexity</h2>
-					<p>No, it's not exactly CSS, but it's close.</p>
+					<ul>
+						<li class="fragment">No, it's not exactly CSS, but it's close.</li>
+						<li class="fragment">Complicates your workflow</li>
+					</ul>
 				</section>
 
 				<section>
@@ -489,42 +497,50 @@ h1 {
 <section>
 	<h2>CLI</h2>
 	<ul>
-		<li>Grunt.js</li>
-		<li>Gulp.js</li>
-		<li>Brunch.js</li>
+		<li><a href="http://gruntjs.com/">Grunt.js</a></li>
+		<li><a href="http://gulpjs.com/">Gulp.js</a></li>
+		<li><a href="http://brunch.io/">Brunch.js</a></li>
+		<li class="fragment">JavaScript task runners will watch your files for changes and compile them on the fly.</li>
+		<li class="fragment">Like CodeKit, they do more than just Sass-to-CSS</li>
 	</ul>
 </section>
 
 
 
+
 <section>
-	<h2>Gulp.js</h2>
+	<h2>Putting It All Together</h2>
+</section>
 
-<pre><code data-trim>gulp.task('styles', function() {
-  return gulp.src('src/sass/*.scss')
-    .pipe(sass({ style: 'expanded' }))
-    .on( 'error', gutil.log )
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(gulp.dest('wp-content/themes/example/css'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(minifycss())
-    .pipe(gulp.dest('wp-content/themes/example/css'))
-    .pipe(notify({ message: 'Styles task complete' }));
-});
-</code></pre>
 
-<p class="small">Check out: <a href="http://markgoodyear.com/2014/01/getting-started-with-gulp/">Getting Started with Gulp</a></p>
 
+<section>
+
+	<h3>style.css</h3>
+	<ul>
+		<li>Has to exist in the theme root with specific comments</li>
+		<li>But doesn't need to be the <em>actual</em> stylesheet</li>
+	</ul>
+
+</section>
+
+
+<section>
+	<h3>theme-name.scss</h3>
+
+	<ul>
+		<li>Keep theme source Sass outside the theme directory</li>
+		<li>Source files get version controlled</li>
+		<li>"Compiled" CSS <em>does not</em></li>
+	</ul>
 </section>
 
 
 
 
 
-				<section>
-					<h2></h2>
-					<p>Hey, this talk was supposed to be about CSS preprocessors <strong>and</strong> WordPress!</p>
-				</section>
+
+
 
 				<section>
 					<h2>Other Approaches</h2>
