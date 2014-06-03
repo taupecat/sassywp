@@ -1,0 +1,25 @@
+/**
+ * 5.0 Content
+ * ----------------------------------------------------------------------------
+ */
+
+.hentry {
+	padding: 40px 0;
+}
+
+.entry-header,
+.entry-content,
+.entry-summary,
+.entry-meta {
+	margin: 0 auto;
+	max-width: 604px;
+	width: 100%;
+}
+
+.sidebar .entry-header,
+.sidebar .entry-content,
+.sidebar .entry-summary,
+.sidebar .entry-meta {
+	max-width: 1040px;
+	padding: 0 376px 0 60px;
+}

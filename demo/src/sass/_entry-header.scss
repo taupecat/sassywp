@@ -1,0 +1,30 @@
+/**
+ * 5.1 Entry Header
+ * ----------------------------------------------------------------------------
+ */
+
+.sidebar .entry-header .entry-meta {
+	padding: 0;
+}
+
+.entry-thumbnail img {
+	display: block;
+	margin: 0 auto 10px;
+}
+
+.entry-header {
+	margin-bottom: 30px;
+}
+
+.entry-title {
+	font-weight: normal;
+	margin: 0 0 5px;
+}
+
+.entry-title a {
+	color: #141412;
+}
+
+.entry-title a:hover {
+	color: #ea9629;
+}

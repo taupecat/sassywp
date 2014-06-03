@@ -1,0 +1,351 @@
+/**
+ * 5.5 Post Formats
+ * ----------------------------------------------------------------------------
+ */
+
+/* Aside */
+.format-aside {
+	background-color: #f7f5e7;
+}
+
+.blog .format-aside:first-of-type,
+.single .format-aside:first-of-type,
+.format-aside + .format-aside,
+.format-aside + .format-link,
+.format-link + .format-aside {
+	box-shadow: inset 0 2px 2px rgba(173, 165, 105, 0.2);
+}
+
+.format-aside .entry-meta {
+	margin-top: 0;
+}
+
+.format-aside blockquote {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+.format-aside cite {
+	font-size: 100%;
+	text-transform: none;
+}
+
+.format-aside cite:before {
+	content: "\2014";
+	margin-right: 5px;
+}
+
+/* Audio */
+.format-audio {
+	background-color: #db572f;
+}
+
+.format-audio .entry-title {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.format-audio .entry-content:before {
+	content: "\f109";
+	float: left;
+	font-size: 64px;
+	position: relative;
+	top: 4px;
+}
+
+.format-audio .entry-content a,
+.format-audio .entry-meta a,
+.format-audio .entry-content a:hover,
+.format-audio .entry-meta a:hover {
+	color: #fbfaf3;
+}
+
+.format-audio .audio-content {
+	background: url(images/dotted-line.png) repeat-y left top;
+	background-size: 4px 4px;
+	float: right;
+	padding-left: 35px;
+	width: 80%;
+	width: -webkit-calc(100% - 85px);
+	width:         calc(100% - 85px);
+}
+
+.format-audio .wp-audio-shortcode {
+	height: 30px !important; /* Override mediaelement.js style */
+	margin: 20px 0;
+	max-width: 400px !important; /* Override mediaelement.js style */
+}
+
+.format-audio audio {
+	max-width: 100% !important; /* Avoid player width overflow. */
+}
+
+/* Chat */
+.format-chat {
+	background-color: #eadaa6;
+}
+
+.format-chat .entry-title {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.format-chat .entry-meta a,
+.format-chat .entry-content a {
+	color: #722d19;
+}
+
+.format-chat .entry-meta .date a:before {
+	content: "\f108";
+	margin-right: 2px;
+}
+
+.format-chat .entry-meta .author {
+	display: none;
+}
+
+.format-chat .chat {
+	margin: 0;
+}
+
+.format-chat .chat .chat-timestamp {
+	color: #722d19;
+	float: right;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 5px 10px 0;
+}
+
+.format-chat .chat .fn {
+	font-style: normal;
+}
+
+/* Gallery */
+.format-gallery {
+	background-color: #fbca3c;
+}
+
+.format-gallery .entry-header {
+	margin-bottom: 15px;
+}
+
+.format-gallery .entry-title {
+	font-size: 50px;
+	font-weight: 400;
+	margin: 0;
+}
+
+.format-gallery .entry-meta a,
+.format-gallery .entry-content a {
+	color: #722d19;
+}
+
+/* Image */
+.format-image .entry-title {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.format-image .categories-links,
+.format-image .tags-links {
+	display: none;
+}
+
+/* Link */
+.format-link {
+	background-color: #f7f5e7;
+}
+
+.blog .format-link:first-of-type,
+.single .format-link:first-of-type {
+	box-shadow: inset 0 2px 2px rgba(173, 165, 105, 0.2);
+}
+
+.format-link .entry-header,
+.format-link .entry-content p:last-child {
+	margin-bottom: 0;
+}
+
+.format-link .entry-title {
+	color: #ca3c08;
+	display: inline;
+	font: 300 italic 20px "Source Sans Pro", Helvetica, sans-serif;
+	margin-right: 20px;
+}
+
+.format-link .entry-title a {
+	color: #bc360a;
+}
+
+.format-link div.entry-meta {
+	display: inline;
+}
+
+/* Quote */
+.format-quote {
+	background-color: #210d10;
+}
+
+.format-quote .entry-content,
+.format-quote .entry-meta {
+	color: #f7f5e7;
+}
+
+.format-quote .entry-content blockquote {
+	font-size: 28px;
+	margin: 0;
+}
+
+.format-quote .entry-content a,
+.format-quote .entry-meta a,
+.format-quote .linked {
+	color: #e63f2a;
+}
+
+.format-quote .entry-content cite a {
+	border-bottom: 1px dotted #fff;
+	color: #fff;
+}
+
+.format-quote .entry-content cite a:hover {
+	text-decoration: none;
+}
+
+.format-quote blockquote small,
+.format-quote blockquote cite {
+	display: block;
+	font-size: 16px;
+}
+
+.format-quote blockquote {
+	font-style: italic;
+	font-weight: 300;
+	padding-left: 75px;
+	position: relative;
+}
+
+.format-quote blockquote:before {
+	content: '\201C';
+	font-size: 140px;
+	font-weight: 400;
+	line-height: .8;
+	padding-right: 25px;
+	position: absolute;
+	left: -15px;
+	top: -3px;
+}
+
+.format-quote .entry-meta .author {
+	display: none;
+}
+
+/* Status */
+.format-status {
+	background-color: #722d19;
+	padding: 0;
+}
+
+.format-status .entry-content,
+.format-status .entry-meta {
+	padding-left: 35px;
+	position: relative;
+}
+
+.format-status .entry-content a {
+	color: #eadaa6;
+}
+
+.format-status .entry-meta a {
+	color: #f7f5e7;
+}
+
+.sidebar .format-status .entry-content,
+.sidebar .format-status .entry-meta {
+	padding-left: 95px;
+}
+
+.format-status .entry-content:before,
+.format-status .entry-meta:before {
+	background: url(images/dotted-line.png) repeat-y left bottom;
+	background-size: 4px 4px;
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	left: 10px;
+	top: 0;
+	width: 1px;
+}
+
+.sidebar .format-status .entry-content:before,
+.sidebar .format-status .entry-meta:before {
+	left: 70px;
+}
+
+.format-status .categories-links,
+.format-status .tags-links {
+	display: none;
+}
+
+/* Ensures the dots in the dot background are in lockstep. */
+.format-status .entry-meta:before {
+	background-position: left top;
+}
+
+.format-status .entry-content {
+	color: #f7f5e7;
+	font-size: 24px;
+	font-style: italic;
+	font-weight: 300;
+	padding-bottom: 30px;
+	padding-top: 40px;
+	position: relative;
+}
+
+.format-status .entry-content p:first-child:before {
+	background-color: rgba(0, 0, 0, 0.65);
+	content: "";
+	height: 3px;
+	margin-top: 13px;
+	position: absolute;
+	left: 4px;
+	width: 13px;
+}
+
+.sidebar .format-status .entry-content > p:first-child:before {
+	left: 64px;
+}
+
+.format-status .entry-content p:last-child {
+	margin-bottom: 0;
+}
+
+.format-status .entry-meta {
+	margin-top: 0;
+	padding-bottom: 40px;
+}
+
+.format-status .entry-meta .date a:before {
+	content: "\f105";
+}
+
+/* Video */
+.format-video {
+	background-color: #db572f;
+}
+
+.format-video .entry-content a,
+.format-video .entry-meta a,
+.format-video .entry-content a:hover,
+.format-video .entry-meta a:hover {
+	color: #fbfaf3;
+}
+
+.format-video .entry-title {
+	font-size: 50px;
+	font-weight: 400;
+}
+
+.format-video .entry-meta {
+	color: #220e10;
+}

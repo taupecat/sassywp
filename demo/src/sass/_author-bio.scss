@@ -1,0 +1,45 @@
+/**
+ * 5.8 Author Bio
+ * ----------------------------------------------------------------------------
+ */
+
+.author-info {
+	margin: 0 auto;
+	max-width: 604px;
+	padding: 30px 0 10px;
+	text-align: left; /* gallery & video post formats */
+	width: 100%;
+}
+
+.author.sidebar .author-info {
+	max-width: 1040px;
+	padding: 30px 376px 10px 60px;
+}
+
+.single .author-info {
+	padding: 50px 0 0;
+}
+
+.author-avatar .avatar {
+	float: left;
+	margin: 0 30px 30px 0;
+}
+
+.single-format-status .author-description {
+	color: #f7f5e7;
+}
+
+.author-description .author-title {
+	clear: none;
+	font: 300 italic 20px "Source Sans Pro", Helvetica, sans-serif;
+	margin: 0 0 8px;
+}
+
+.author-link {
+	color: #ca3c08;
+	margin-left: 2px;
+}
+
+.author.archive .author-link {
+	display: none;
+}

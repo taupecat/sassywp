@@ -1,0 +1,30 @@
+/**
+ * 3.0 Basic Structure
+ * ----------------------------------------------------------------------------
+ */
+
+.site {
+	background-color: #fff;
+	border-left: 1px solid #f2f2f2;
+	border-right: 1px solid #f2f2f2;
+	margin: 0 auto;
+	max-width: 1600px;
+	width: 100%;
+}
+
+.site-main {
+	position: relative;
+}
+
+.site-main .sidebar-container {
+	height: 0;
+	position: absolute;
+	top: 40px;
+	width: 100%;
+	z-index: 1;
+}
+
+.site-main .sidebar-inner {
+	margin: 0 auto;
+	max-width: 1040px;
+}

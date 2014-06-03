@@ -1,0 +1,39 @@
+{
+  "name": "carrnew-website",
+  "title": "Carr Workplaces Website",
+  "url": "",
+  "author": {
+    "name": "Tracy Rotton",
+    "email": "trotton@rp3agency.com",
+    "url": "http://taupecat.com"
+  },
+  "contributors": [
+    {
+      "name": "Brian Watson",
+      "email": "bwatson@rp3agency.com",
+      "url": "http://bsw.io"
+    }
+  ],
+  "copyright": "2014",
+  "version": "1.0.0",
+  "license": "Private",
+  "repository": {
+    "type": "git",
+    "url": "git@rp3agency.beanstalkapp.com:/car-carnew-website.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.7.0",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-clean": "^0.3.0",
+    "gulp-concat": "^2.2.0",
+    "gulp-jshint": "^1.6.1",
+    "gulp-minify-css": "^0.3.4",
+    "gulp-notify": "^1.3.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^0.5.0",
+    "gulp-uglify": "^0.3.0",
+    "gulp-util": "^2.2.14",
+    "matchdep": "~0.1.2"
+  },
+  "dependencies": {}
+}
