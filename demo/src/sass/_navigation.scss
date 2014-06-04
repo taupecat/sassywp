@@ -3,6 +3,24 @@
  * ----------------------------------------------------------------------------
  */
 
+$original-colors: (
+	#f7f5e7, #141412, #bc360a
+);
+
+$modified-colors: (
+	#b22f17, #f7f5e7, #f1d3a6
+);
+
+$demo-colors: $original-colors;
+
+/* Navbar */
+.navbar {
+	background-color: nth($demo-colors, 1);	/* look here! */
+	margin: 0 auto;
+	max-width: 1600px;
+	width: 100%;
+}
+
 .main-navigation {
 	clear: both;
 	margin: 0 auto;
@@ -20,15 +38,15 @@ div.nav-menu > ul {
 .nav-menu li {
 	display: inline-block;
 	position: relative;
-}
 
-.nav-menu li a {
-	color: #141412;
-	display: block;
-	font-size: 15px;
-	line-height: 1;
-	padding: 15px 20px;
-	text-decoration: none;
+	a {
+		color: nth($demo-colors, 2);		/* look here! */
+		display: block;
+		font-size: 15px;
+		line-height: 1;
+		padding: 15px 20px;
+		text-decoration: none;
+	}
 }
 
 .nav-menu li:hover > a,
@@ -89,20 +107,12 @@ ul.nav-menu .focus > ul,
 .nav-menu .current_page_ancestor > a,
 .nav-menu .current-menu-item > a,
 .nav-menu .current-menu-ancestor > a {
-	color: #bc360a;
+	color: nth($demo-colors, 3);			/* look here! */
 	font-style: italic;
 }
 
 .menu-toggle {
 	display: none;
-}
-
-/* Navbar */
-.navbar {
-	background-color: #f7f5e7;
-	margin: 0 auto;
-	max-width: 1600px;
-	width: 100%;
 }
 
 .site-header .search-form {

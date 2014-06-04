@@ -441,6 +441,54 @@ h1 {
 	</ul>
 </section>
 
+
+<!-- Sass Frameworks & Libraries -->
+
+<section>
+
+<section>
+	<h3>Sass Frameworks & Libraries</h3>
+
+	<ul>
+		<li class="fragment"><a href="http://compass-style.org">Compass</a></li>
+		<li class="fragment"><a href="http://bourbon.io">Bourbon</a></li>
+	</ul>
+</section>
+
+<section>
+	<h3>Compass</h3>
+
+	<ul>
+		<li class="fragment">Vendor prefixing (although autoprefixer is a better option maybe?)</li>
+		<li class="fragment">Typography and vertical rhythm tools</li>
+		<li class="fragment">Automatic sprite generation (YMMV)</li>
+	</ul>
+</section>
+
+<section>
+	<h3>Bourbon</h3>
+
+	<ul>
+		<li class="fragment">Lighter weight library</li>
+		<li class="fragment">Also does vendor prefixing</li>
+		<li class="fragment">Grid system via "Neat"</li>
+		<li class="fragment">Typography tools and other helpers via "Bitters"</li>
+		<li class="fragment">UI patterns (think Bootstrap-type stuff) via "Refills"</li>
+	</ul>
+</section>
+
+
+<section>
+	<h3>Sass Frameworks & Libraries</h3>
+
+	Neither is required to use Sass.
+</section>
+
+</section>
+
+
+
+
 				<section>
 					<h3>Why Sass Sucks*</h3>
 					<p><img src="images/sad-panda.jpg"></p>
@@ -470,6 +518,11 @@ h1 {
 						<li>Command-line based tools</li>
 					</ol>
 				</section>
+
+
+
+
+
 
 
 
@@ -519,7 +572,7 @@ h1 {
 	<h3>style.css</h3>
 	<ul>
 		<li>Has to exist in the theme root with specific comments</li>
-		<li>But doesn't need to be the <em>actual</em> stylesheet</li>
+		<li>But doesn't need to be the <strong>actual</strong> stylesheet</li>
 	</ul>
 
 </section>
@@ -531,7 +584,7 @@ h1 {
 	<ul>
 		<li>Keep theme source Sass outside the theme directory</li>
 		<li>Source files get version controlled</li>
-		<li>"Compiled" CSS <em>does not</em></li>
+		<li>"Compiled" CSS <strong>does not</strong></li>
 	</ul>
 </section>
 
@@ -542,47 +595,6 @@ h1 {
 
 
 
-				<!-- <section>
-					<h2>Other Approaches</h2>
-					<p>Don't name your project's main Sass file "style.scss".</p>
-				</section> -->
-
-				<!-- <section>
-					<h2>style.css</h2>
-<pre><code data-trim>/*
-Theme Name: Twenty Twelve
-Theme URI: http://wordpress.org/themes/twentytwelve
-Author: the WordPress team
-Author URI: http://wordpress.org/
-*/</code></pre>
-				</section> -->
-
-				<!-- <section>
-					<p>If you're going to minify the final result, those comments go away and your theme will be unusable.*</p>
-					<p class="fragment">There's <strong>nothing</strong> in the WordPress handbook that says you must use <strong>style.css</strong> as your stylesheet.</p>
-				</section> -->
-
-				<!-- <section>
-					<p>*There <strong>is</strong> a way to force comments to be preserved, even when compressing the output:</p>
-<pre><code data-trim>
-/*!
-Theme Name: Twenty Twelve
-Theme URI: http://wordpress.org/themes/twentytwelve
-Author: the WordPress team
-Author URI: http://wordpress.org/
-*/
-</code></pre>
-				</section> -->
-
-				<!-- <section>
-					<h2>My Process</h2>
-					<ol>
-						<li class="fragment"><strong>Use SCSS & Compass when I'm building a static prototype.</strong> That SCSS gets reused when I'm ready to build templates.</li>
-						<li class="fragment"><strong>Use CodeKit to build out the CSS,</strong> unminified and with lots of debugging info. FireSass is a Firebug plugin that's great for development.</li>
-						<li class="fragment"><strong>SCSS gets committed to Git</strong>; processed CSS does <strong>not</strong>.</li>
-						<li class="fragment">When time comes to build to production, I override the debug settings, <strong>process the CSS as minified</strong>, and push it to the server.</li>
-					</ol>
-				</section> -->
 
 <section>
 	<h3>Wrap Up</h3>
@@ -590,16 +602,29 @@ Author URI: http://wordpress.org/
 	<p class="fragment">Uh, I dunno.</p>
 </section>
 
-<section data-markdown>
-	### Further Reading
 
-	* **Sass** http://sass-lang.com
-	* **Compass** http://compass-style.org/
-	* **CodeKit** http://incident57.com/codekit/
-	* **Grunt.js** http://gruntjs.com/
-	* **Gulp.js** http://gulpjs.com/
-	* **Brunch.js** http://brunch.io/
+<section>
+	<section data-markdown>
+		### Further Reading
+
+		* **Sass** http://sass-lang.com
+		* **Compass** http://compass-style.org/
+		* **Bourbon** http://bourbon.io/
+		* **CodeKit** http://incident57.com/codekit/
+		* **Grunt.js** http://gruntjs.com/
+		* **Gulp.js** http://gulpjs.com/
+		* **Brunch.js** http://brunch.io/
+	</section>
+
+	<section data-markdown>
+		### Further Reading
+
+		* **The Sass Way** http://thesassway.com/
+		* **Hugo Giraudel on SitePoint** http://www.sitepoint.com/author/hgiraudel/
+	</section>
 </section>
+
+
 
 
 <section>

@@ -31,8 +31,6 @@ gulp.task('default', ['clean'], function() {
 
 // Watch
 gulp.task('watch', function() {
-	gulp.start('default');
-
 	// Watch .scss files
 	gulp.watch('src/sass/**/*.scss', ['styles']);
 });

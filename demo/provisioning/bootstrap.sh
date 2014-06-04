@@ -22,9 +22,9 @@ apt-get install -y rubygems
 echo "Installing Sass"
 gem install sass
 
-echo "Running gulp for build compilation"
-cd /vagrant
-gulp
+# echo "Running gulp for build compilation"
+# cd /vagrant
+# gulp
 
 echo "Installing apache2..."
 apt-get update
@@ -49,6 +49,7 @@ curl -sS https://getcomposer.org/installer | php
 echo "Installing packages from composer"
 cd /var/www
 php composer.phar install
+mv composer.phar /usr/local/bin/composer
 
 echo "Installing mysql..."
 MYSQL_PASS="password"
