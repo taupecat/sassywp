@@ -190,6 +190,10 @@ body {
 
 h1, h2, h3 {
   font-family: $font-header;
+}
+
+.subtitle {
+  font-family: $font-header;
 }</code></pre>
 	</section>
 
@@ -200,6 +204,10 @@ h1, h2, h3 {
 }
 
 h1, h2, h3 {
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.subtitle {
   font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
 }</code></pre>
 	</section>
@@ -226,7 +234,7 @@ h1, h2, h3 {
   font-size: 13px;
 }
 
-.widget-area {
+.footer-widget-area {
   @extend %widget-default;
 
   font-size: 16px;
@@ -237,7 +245,7 @@ h1, h2, h3 {
 	<section>
 		<h3>@extend & Placeholder Selectors</h3>
 <pre><code data-trim>.sidebar,
-.widget-area {
+.footer-widget-area {
   background-color: #FFFCEB;
   color: #262626;
   text-decoration: underline;
@@ -247,9 +255,21 @@ h1, h2, h3 {
   font-size: 13px;
 }
 
-.widget-area {
+.footer-widget-area {
   font-size: 16px;
 }</code></pre>
+	</section>
+
+
+	<section>
+		<h3>@extend & Placeholder Selectors</h3>
+
+		<ul>
+			<li class="fragment">Great for "non-semantic" styling</li>
+			<li class="fragment">Can't use them inside media queries</li>
+			<li class="fragment">Sometimes, inheritance problems arise</li>
+		</ul>
+
 	</section>
 
 </section>
@@ -289,7 +309,7 @@ h1, h2, h3 {
 	<section>
 		<h3>Concatenation</h3>
 		<ul>
-			<li>Resulting compiled <strong>project.css</strong> contains all of the imported files.</li>
+			<li class="fragment">Resulting compiled <strong>project.css</strong> contains all of the imported files.</li>
 			<li class="fragment"><strong>No extra HTTP requests required.</strong></li>
 		</ul>
 	</section>
@@ -304,7 +324,7 @@ h1, h2, h3 {
 	<section>
 		<h3>Functions</h3>
 		<ul>
-			<li>Do one thing, then return a result.</li>
+			<li class="fragment">Do one thing, then return a result.</li>
 			<li class="fragment">Calculate a value or modify a color, for example.</li>
 	</section>
 
@@ -345,7 +365,7 @@ h1, h2, h3 {
 <pre><code data-trim>$default-font-size: 16px !default;
 
 @mixin rem($property, $value, $context: $default-font-size) {
-  #{$property}: $value;
+  #{$property}: $value; /*! IE8 Fallback */
   #{$property}: ($value / $context * 1rem);
 }
 
@@ -357,7 +377,7 @@ h1 {
 	<section>
 		<h3>Mixins</h3>
 <pre><code data-trim>h1 {
-  font-size: 18px;
+  font-size: 18px; /*! IE8 Fallback */
   font-size: 1.125rem;
 }</code></pre>
 	</section>
@@ -498,7 +518,7 @@ h1 {
 				<section>
 					<h2>Code Bloat</h2>
 					<ul>
-						<li class="fragment">Use features such as nesting responsibly. (Inception rule)</li>
+						<li class="fragment">Use features such as nesting responsibly. (<a href="http://thesassway.com/beginner/the-inception-rule">Inception rule</a>)</li>
 						<li class="fragment">A few extra characters here & there isn't going to be a big deal so long as you're minifying and Gzipping.</li>
 					</ul>
 				</section>
@@ -514,8 +534,8 @@ h1 {
 				<section>
 					<h2>A WordPress Workflow</h2>
 					<ol>
-						<li>GUI tools</li>
-						<li>Command-line based tools</li>
+						<li class="fragment">GUI tools</li>
+						<li class="fragment">Command-line based tools</li>
 					</ol>
 				</section>
 
@@ -536,7 +556,7 @@ h1 {
 		<ul>
 			<li>Graphical interface for compiling into CSS</li>
 			<li>Mac only</li>
-			<li>Handles <strong>Sass</strong>, <strong>Compass</strong>, <strong>LESS</strong> and <strong>Stylus</strong> and a bunch of other stuff.</li>
+			<li>Handles <strong>Sass</strong>, <strong>Compass</strong>, <strong>Bourbon</strong> and a bunch of other stuff.</li>
 		</ul>
 	</section>
 
@@ -670,7 +690,6 @@ h1 {
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
