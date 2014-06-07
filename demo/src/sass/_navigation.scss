@@ -4,11 +4,15 @@
  */
 
 $original-colors: (
-	#f7f5e7, #141412, #bc360a
+	#f7f5e7,		// Background
+	#141412,		// Foreground
+	#bc360a			// Link
 );
 
 $modified-colors: (
-	#b22f17, #f7f5e7, #f1d3a6
+	#b22f17,		// Background
+	#f7f5e7,		// Foreground
+	#f1d3a6			// Link
 );
 
 $demo-colors: $original-colors;
