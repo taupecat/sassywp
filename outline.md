@@ -1,6 +1,4 @@
-# CSS Preprocessors + WordPress
-
-## It's Always Sassy in Philadelphia
+# Getting Sassy with WordPress
 
 ## Tweet It
 
@@ -8,21 +6,13 @@
 
 ## Topics in this Talk
 
-* What is a CSS preprocessor?
-* What can CSS preprocessors do?
-* How can CSS preprocessors enter your WordPress theming workflow?
+* What is Sass?
+* What can it do?
+* How can make it part of my WordPress theming life?
 
-## What Is a CSS Preprocessor?
+## What Is Sass?
 
 * CSS preprocessors are a way of introducing "programming" concepts into CSS
-
-## Popular CSS Preprocessors
-
-There's really 3 that have won out.  There's really 1 that has won.
-
-* LESS (or Less now maybe?)
-* Stylus
-* Sass
 
 ## Let's Get Sassy
 
