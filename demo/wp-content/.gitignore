@@ -1,8 +1,0 @@
-plugins/*
-!plugins/acf-flexible-content/
-!plugins/acf-repeater/
-!plugins/advanced-custom-fields/
-!plugins/carr/
-!plugins/gravityforms/
-!plugins/wp-migrate-db-pro/
-!plugins/wp-migrate-db-pro-media-files/
