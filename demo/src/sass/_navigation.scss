@@ -4,14 +4,18 @@
  */
 
 $original-colors: (
-	#f7f5e7, #141412, #bc360a
+	#f7f5e7,	// Off white
+	#141412,	// Dark gray
+	#bc360a		// Dark red-orange
 );
 
 $modified-colors: (
-	#b22f17, #f7f5e7, #f1d3a6
+	#bc360a,	// Dark red-orange
+	#f7f5e7,	// Off white
+	#f1d3a6		// Buff
 );
 
-$demo-colors: $original-colors;
+$demo-colors: $modified-colors;
 
 /* Navbar */
 .navbar {
